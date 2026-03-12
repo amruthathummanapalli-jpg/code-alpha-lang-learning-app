@@ -1,0 +1,86 @@
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("===== LinguaPlay Language Learning App =====");
+        System.out.println("Choose a language to learn:");
+        System.out.println("1. Spanish");
+        System.out.println("2. French");
+        System.out.println("3. German");
+
+        int choice = input.nextInt();
+
+        if(choice == 1){
+            spanishQuiz(input);
+        }
+        else if(choice == 2){
+            frenchQuiz(input);
+        }
+        else if(choice == 3){
+            germanQuiz(input);
+        }
+        else{
+            System.out.println("Invalid choice.");
+        }
+
+        input.close();
+    }
+
+    public static void spanishQuiz(Scanner input){
+
+        System.out.println("\nSpanish Quiz");
+        System.out.println("How do you say 'Hello' in Spanish?");
+        System.out.println("1. Hola");
+        System.out.println("2. Bonjour");
+        System.out.println("3. Hallo");
+
+        int answer = input.nextInt();
+
+        if(answer == 1){
+            System.out.println("Correct! Hola means Hello.");
+        }
+        else{
+            System.out.println("Wrong answer.");
+        }
+    }
+
+    public static void frenchQuiz(Scanner input){
+
+        System.out.println("\nFrench Quiz");
+        System.out.println("How do you say 'Thank you' in French?");
+        System.out.println("1. Gracias");
+        System.out.println("2. Danke");
+        System.out.println("3. Merci");
+
+        int answer = input.nextInt();
+
+        if(answer == 3){
+            System.out.println("Correct! Merci means Thank you.");
+        }
+        else{
+            System.out.println("Wrong answer.");
+        }
+    }
+
+    public static void germanQuiz(Scanner input){
+
+        System.out.println("\nGerman Quiz");
+        System.out.println("How do you say 'Yes' in German?");
+        System.out.println("1. Ja");
+        System.out.println("2. Si");
+        System.out.println("3. Oui");
+
+        int answer = input.nextInt();
+
+        if(answer == 1){
+            System.out.println("Correct! Ja means Yes.");
+        }
+        else{
+            System.out.println("Wrong answer.");
+        }
+    }
+}
